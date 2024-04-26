@@ -14,17 +14,16 @@ public class CultureMediaServiceImpl implements CultureMediaService {
         this.viewsRepository = viewsRepository;
     }
 
-    @Override
     public List<Video> getAllVideos() {
         return List.of();
     }
 
-    @Override
+
     public View registerView(View view) {
         return null;
     }
 
-    @Override
+
     public Video saveVideo(Video video) {
         return null;
     }
