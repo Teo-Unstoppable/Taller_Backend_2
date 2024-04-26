@@ -4,6 +4,9 @@ import java.util.List;
 
 import culturemedia.model.Video;
 
+/**
+ * Implementation of VideoRepository using an in-memory map.
+ */
 
 /**
  * Implementation of VideoRepository using an in-memory map.
