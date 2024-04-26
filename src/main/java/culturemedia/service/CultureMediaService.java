@@ -2,9 +2,10 @@ package culturemedia.service;
 
 import culturemedia.model.Video;
 import culturemedia.model.View;
+import java.util.List;
 
 public interface CultureMediaService {
-    void uploadVideo(Video video);
-    void playVideo(View reproduction);
-    int getTotalViews(String codeVideo);
+    List<Video> getAllVideos();
+    View registerView(View view);
+    Video saveVideo(Video video);
 }
