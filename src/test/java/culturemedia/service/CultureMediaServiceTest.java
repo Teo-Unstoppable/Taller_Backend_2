@@ -50,10 +50,12 @@ class CultureMediaServiceImplTest {
         List<Video> videos = cultureMediaService.findAll();
         assertEquals(6, videos.size());
     }
+
     @Test
     void when_FindAll_does_not_find_any_video_an_VideoNotFoundException_should_be_thrown_successfully() throws CultureMediaException {
         VideoNotFoundException videoNotFoundException = assertThrows(VideoNotFoundException.class, () -> {
             cultureMediaService.findAll();
         });
+
     }
 }
