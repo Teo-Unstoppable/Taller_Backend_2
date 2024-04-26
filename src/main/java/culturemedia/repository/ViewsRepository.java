@@ -4,5 +4,5 @@ import culturemedia.model.View;
 
 public interface ViewsRepository {
 
-    void addPlayback(View view);
+    void registerView(View view);
 }
