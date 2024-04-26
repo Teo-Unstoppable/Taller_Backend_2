@@ -10,9 +10,8 @@ import culturemedia.model.Video;
 
 
 public interface VideoRepository {
-    List<Video> getAllVideos();
-    Video saveVideo(Video save);
-    List<Video> searchByName(String title);
-    List<Video> findByDuration(Double fromDuration, Double toDuration);
+    List<Video> findAll();
+    Video save(Video save);
+    List<Video> find(String title);
+    List<Video> find(Double fromDuration, Double toDuration);
 }
-
