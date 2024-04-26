@@ -8,7 +8,6 @@ import culturemedia.model.Video;
  * Implementation of VideoRepository using an in-memory map.
  */
 
-
 public interface VideoRepository {
     List<Video> findAll();
     Video save(Video save);
