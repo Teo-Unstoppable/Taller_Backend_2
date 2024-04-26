@@ -10,21 +10,21 @@ import java.util.List;
 public class CultureMediaServiceImpl implements CultureMediaService {
     private ViewsRepository viewsRepository;
 
-    public CultureMediaServiceImpl(ViewsRepository viewsRepository) {
+    public CultureMediaServiceImpl() {
         this.viewsRepository = viewsRepository;
     }
 
-    public List<Video> getAllVideos() {
+    public List<Video> findAll() {
         return List.of();
     }
 
 
-    public View registerView(View view) {
+    public View save(View view) {
         return null;
     }
 
 
-    public Video saveVideo(Video video) {
+    public Video save(Video video) {
         return null;
     }
 }
