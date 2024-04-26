@@ -1,4 +1,5 @@
 package culturemedia.service.Impl;
+import culturemedia.exception.CultureMediaException;
 import culturemedia.exception.VideoNotFoundException;
 
 import culturemedia.model.Video;
@@ -33,7 +34,26 @@ public class CultureMediaServiceImpl implements CultureMediaService {
     public View save(View view)  {
         return viewsRepository.add(view);
     }
+    @Override
+    public List<Video> find(String title) throws VideoNotFoundException {
+        List<Video> filteredVideos = videoRepository.find(title);
+        if (filteredVideos.isEmpty()){
+            throw new VideoNotFoundException();
+        }else{
+            return filteredVideos;
+        }
 
+    }
+
+    @Override
+    public List<Video> find(Double fromDuration, Double toDuration) throws VideoNotFoundException {
+        List<Video> filteredVideos = videoRepository.find(fromDuration, toDuration);
+        if (filteredVideos.isEmpty()) {
+            throw new VideoNotFoundException();
+        } else {
+            return filteredVideos;
+        }
+    }
 }
 
 
